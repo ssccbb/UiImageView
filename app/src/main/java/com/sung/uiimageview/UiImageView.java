@@ -96,8 +96,8 @@ public class UiImageView extends RelativeLayout implements Animation.AnimationLi
             img2 = new ImageView(mContext);
             img1.setScaleType(ImageView.ScaleType.FIT_END);
             img2.setScaleType(ImageView.ScaleType.FIT_END);
-            int measureWidth = MeasureSpec.getSize(widthMeasureSpec) / 2;
-            int measureHeight = MeasureSpec.getSize(heightMeasureSpec) / 2;
+            int measureWidth = MeasureSpec.getSize(widthMeasureSpec);
+            int measureHeight = MeasureSpec.getSize(heightMeasureSpec);
             Log.e(TAG, "onMeasure: " + measureWidth + "/" + measureHeight);
             LayoutParams params = new LayoutParams(measureWidth, measureHeight);
             //先添加img2再img1 保证img1在上层
