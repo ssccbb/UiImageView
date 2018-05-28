@@ -38,11 +38,11 @@ public class UiImageView extends RelativeLayout implements Animation.AnimationLi
     /**
      * 动画长度（淡入淡出因为两个动画组合 实际展出是双倍时间）
      */
-    private final int Animation_Duration = 1200;
+    private final int Animation_Duration = 600;
     /**
      * 动画延迟（startAnim()方法内有随机生成 未注释的话使用该默认值）
      */
-    private int Animation_Delay = 2000;
+    private int Animation_Delay = 1000;
     /**
      * 两个imageview各自的动画
      */
@@ -177,7 +177,7 @@ public class UiImageView extends RelativeLayout implements Animation.AnimationLi
      */
     private void startAnim() {
         //营造当多个view同时在界面上时不同步切换效果
-        Animation_Delay = (int) (2000 + (Math.random() * 25) * 100);
+        //Animation_Delay = (int) (2000 + (Math.random() * 25) * 100);
         animStart.sendEmptyMessageDelayed(0, Animation_Delay);
     }
 
